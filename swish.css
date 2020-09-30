@@ -1,0 +1,85 @@
+.box{
+height:50%;
+	width:100%;
+	overflow:hidden;
+	
+}
+.contain
+{
+	float:right;
+	height:100%;
+	width:50%;
+}
+	
+.contain2
+{
+	float:right;
+	height:100%;
+	width:50%;
+	overflow: hidden;
+}
+.box2
+{
+	position:relative;
+	top:20%;
+	left:30%;
+	height:200px;
+	width:200px;
+	background:	#F5DEB3;
+	border-radius:50%;
+}
+.pot
+{
+	position:relative;
+	top:50%;
+	left:45%;
+	transform: translate(-40%,-50%) scale(1.2);
+	height:100px;
+	width:100px;
+	background:white;
+	border-radius:50%;
+	overflow:hidden;
+	box-shadow:0 0 0 4px black;
+}
+.coffee
+{
+	position: relative;
+	width:100%;
+	height:100%;
+	background:#3b2f2f;
+	border-radius:50%;
+	box-shadow: inset 0 0 50px rgba(0,0,0,0,5);
+}
+.coffee::before,.coffee::after
+{
+	content:'';
+	position:absolute;
+	width:200%;
+	height:200%;
+	top:0;
+	left:50%;
+	transform:translate(-50%,-75%);
+	background:white;
+}
+.coffee::before
+{
+	border-radius:50%;
+	background: rgba(255,255,255,1);
+	animation: animate 10s linear infinte;
+}
+.coffee::after
+{
+	border-radius:40%;
+	background:rgba(225,225,255,.5);
+	animation: animate 5s linear infinite;
+}
+@keyframes animate
+{
+	0%{
+		transform: translate(-50%,-70%) rotate(0deg);
+	}
+	100%
+	{
+		transform: translate(-50%,-75%) rotate(360deg);
+	}
+}
